@@ -37,7 +37,7 @@ async function fetchArticles() {
     articlesDiv.innerHTML = '<p class="loading">Ładowanie artykułów</p>'; 
 
     try {
-        const response = await fetch(`${SUPABASE_URL}/rest/v1/articles?select=*&order=created_at.desc`, { 
+        const response = await fetch(`${SUPABASE_URL}/rest/v1/article?select=*&order=created_at.desc`, { 
             method: 'GET',
             headers: {
                 'apikey': API_KEY,
@@ -107,7 +107,7 @@ articleForm.addEventListener('submit', async (event) => {
     }
 
     try {
-        const response = await fetch(`${SUPABASE_URL}/rest/v1/articles`, {
+        const response = await fetch(`${SUPABASE_URL}/rest/v1/article`, {
             method: 'POST',
             headers: {
                 'apikey': API_KEY,
