@@ -56,11 +56,6 @@ async function fetchArticles() {
 
         articlesDiv.innerHTML = ''; 
 
-        if (data.length === 0) {
-            articlesDiv.innerHTML = '<p>Brak artykułów do wyświetlenia. Dodaj pierwszy!</p>';
-            return;
-        }
-
         data.forEach(article => {
             const articleElement = document.createElement('div');
             articleElement.classList.add('article');
@@ -84,7 +79,6 @@ async function fetchArticles() {
     }
 }
 
-// === DODAJ NOWY ARTYKUŁ (Asynchronicznie) ===
 articleForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     console.log('Formularz wysłany, rozpoczynam dodawanie artykułu...');
