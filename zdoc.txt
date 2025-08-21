@@ -1,3 +1,9 @@
-1. make sure to edit introduction component so it fits figma project
-2. place it just under header like in FP (how? in app.jsx?)
-3. change font to match FP
+Edit code locally → save.
+
+npm run build && npm run preview (test locally).
+
+git add . → git commit -m "update" → git push.
+
+GitHub Actions builds and deploys.
+
+Refresh https://phantomvoyager4.github.io/.
