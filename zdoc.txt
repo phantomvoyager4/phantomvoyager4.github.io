@@ -1,0 +1,3 @@
+1. make sure to edit introduction component so it fits figma project
+2. place it just under header like in FP (how? in app.jsx?)
+3. change font to match FP
