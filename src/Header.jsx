@@ -17,5 +17,3 @@ function Header() {
 
 
 export default Header
-
-{/* <img src={banner} alt="Logo" className="h-[115px]" />*/}
