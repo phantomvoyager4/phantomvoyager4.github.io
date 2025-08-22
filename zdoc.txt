@@ -1,9 +1,0 @@
-Edit code locally → save.
-
-npm run build && npm run preview (test locally).
-
-git add . → git commit -m "update" → git push.
-
-GitHub Actions builds and deploys.
-
-Refresh https://phantomvoyager4.github.io/.
