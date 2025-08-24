@@ -3,11 +3,13 @@ import Copyright from "./Copyright";
 import Hello from "./Hello";
 import Card from "./Card";
 import Warning from "./Warning";
+import Menu from "./Menu";
 
 function App() {
 
   return (
     <>
+      <Menu />
       <Header />
       <div className="flex flex-col items-center h-screen pt-[147px]">
         <Hello />
