@@ -2,7 +2,7 @@ import Header from "./Components/Header";
 import Copyright from "./Components/Copyright";
 import Hello from "./Components/Hello";
 import Card from "./Components/Card";
-import Warning from "./Warning";
+import Warning from "./Components/Warning";
 import Menu from "./Components/Menu";
 import { useState } from "react";
 
