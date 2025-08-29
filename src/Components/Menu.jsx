@@ -1,4 +1,6 @@
 import menuclose from './assets/menuclose.png'
+import { Link } from 'react-router-dom';
+
 function Menu({ open, onClose }) {
     return (
         <nav className={` bg-black fixed top-0 left-0 w-50 h-full z-50 transition-transform duration-300 ${open ? 'translate-x-0' : '-translate-x-full'}`}>
@@ -9,7 +11,7 @@ function Menu({ open, onClose }) {
               <li><a href="https://linktr.ee/kashiami" target="_blank" className="hover:underline">Linktree</a></li>
               <li><a href="mailto:obywatelnumer04230@gmail.com" className="hover:underline">Direct contact</a></li>
               <li><a href="https://github.com/phantomvoyager4/phantomvoyager4.github.io" target="_blank" className="hover:underline">Github repo</a></li>
-              <li className="cursor-pointer hover:underline">About me</li>
+              <Link to="/about" className="cursor-pointer hover:underline">About me</Link>
             </ul>
         </nav>
     );
