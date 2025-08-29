@@ -3,7 +3,7 @@ import Copyright from "../Components/Copyright";
 import Hello from "../Components/Hello";
 import Card from "../Components/Card";
 import Warning from "../Components/Warning";
-import Menu from "../Components/Menu";
+import Menu from "../Components/Navbar";
 import { useState } from "react";
 
 export function Home() {
