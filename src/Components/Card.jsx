@@ -1,6 +1,6 @@
 import strzalkaDL from './assets/strzalkaDL.png';
 import strzalkaDP from './assets/strzalkaDP.png';
-import { cardStorage } from './cardStorage';
+import { cardStorage } from './cardStorage.js';
 import { useState } from 'react';
 
 function Card() {

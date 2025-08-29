@@ -1,9 +1,9 @@
-import Header from "./Header";
-import Copyright from "./Copyright";
-import Hello from "./Hello";
-import Card from "./Card";
+import Header from "./Components/Header";
+import Copyright from "./Components/Copyright";
+import Hello from "./Components/Hello";
+import Card from "./Components/Card";
 import Warning from "./Warning";
-import Menu from "./Menu";
+import Menu from "./Components/Menu";
 import { useState } from "react";
 
 function App() {

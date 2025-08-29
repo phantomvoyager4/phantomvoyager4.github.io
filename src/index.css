@@ -1,6 +1,6 @@
 @font-face {
   font-family: InriaSerif;
-  src: url("../src/assets/fonts/InriaSerif-Regular.ttf");
+  src: url("../src/Components/assets/fonts/InriaSerif-Regular.ttf");
 }
 @import "tailwindcss";
 
