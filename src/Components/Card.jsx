@@ -3,6 +3,7 @@ import strzalkaDP from './assets/strzalkaDP.png';
 import { cardStorage } from './cardStorage.js';
 import { useState } from 'react';
 import { themes } from "../themecolorsStorage";
+import { motion } from "framer-motion";
 
 function Card({ palette }) {
   const [current, setCurrent] = useState(0);
@@ -16,6 +17,7 @@ function Card({ palette }) {
   };
 
   return (
+    <motion.section initial={{ y: -30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.6 }}>
     <div className="flex flex-row items-center gap-[32px]">
       <img src={strzalkaDL} alt="Previous" className="cursor-pointer" onClick={handlePrev} style={{ filter: `invert(${palette.icon === "#181818" ? 1 : 0})` }} />
       <div className="w-[650px] h-[650px] border-5 flex items-center flex-col gap-[32px] pt-[16px]" style={{ borderColor: palette.cardIcon }}>
@@ -35,6 +37,7 @@ function Card({ palette }) {
       </div>
       <img src={strzalkaDP} alt="Next" className="cursor-pointer" onClick={handleNext} style={{ filter: `invert(${palette.icon === "#181818" ? 1 : 0})` }} />
     </div>
+    </motion.section>
   );
 }
 

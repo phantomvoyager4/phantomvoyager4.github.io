@@ -2,9 +2,11 @@ import MusicD from './assets/MusicD.png';
 import YoutubeD from './assets/YoutubeD.png';
 import SpotifyD from './assets/SpotifyD.png';
 import { themes } from '../themecolorsStorage';
+import { motion } from "framer-motion";
 
 function Aboutme({ palette }) {
   return (
+    <motion.section initial={{ y: -30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.6 }}>
     <div className="flex flex-col items-center gap-[24px]">
       <div className="font-InriaSerif text-4xl" style={{ color: palette.aboutmeText }}>Hello! I am kashiami, 21yo jumpstyle producent from Poland.</div>
       <div className="flex flex-col gap-[8px]">
@@ -35,6 +37,7 @@ function Aboutme({ palette }) {
       </div>
       </div>
     </div>
+    </motion.section>
   );
 }
 
