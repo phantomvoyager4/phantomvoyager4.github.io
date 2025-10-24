@@ -31,7 +31,7 @@ function Card({ palette }) {
           style={{ filter: `invert(${palette.icon === "#181818" ? 1 : 0})` }}
         />
         <div
-          className="w-[650px] h-[650px] border-5 flex items-center flex-col gap-[32px] pt-[16px]"
+          className="w-[650px] h-[650px] border-5 flex items-center flex-col gap-[16px] pt-[16px]"
           style={{ borderColor: palette.cardIcon }}
         >
           <a href={data.logoHref} target="_blank" rel="noopener noreferrer">
@@ -41,14 +41,14 @@ function Card({ palette }) {
               className="w-[448px] h-[448px] transition-transform duration-200 transform hover:scale-102"
             />
           </a>
-          <div className="flex flex-col items-center gap-0">
+          <div className="flex flex-col items-center gap-[8px]">
             <div
               className="font-InriaSerif text-2xl"
               style={{ color: palette.cardText }}
             >
               {data.streamText}
             </div>
-            <div className="flex flex-row gap-[5px]">
+            <div className="flex flex-row gap-[12px]">
               {data.links.map((link, idx) => (
                 <a
                   href={link.url}
@@ -59,10 +59,7 @@ function Card({ palette }) {
                   <img
                     src={link.img}
                     alt="Logo"
-                    className="w-[100px] transition-transform duration-200 transform hover:scale-110"
-                    style={{
-                      filter: `invert(${palette.icon === "#181818" ? 1 : 0})`,
-                    }}
+                    className="w-[88px] transition-transform duration-200 transform hover:scale-105"
                   />
                 </a>
               ))}

@@ -1,6 +1,6 @@
-import MusicD from "./assets/MusicD.png";
-import YoutubeD from "./assets/YoutubeD.png";
-import SpotifyD from "./assets/SpotifyD.png";
+import MusicD from "./assets/Music.svg";
+import YoutubeD from "./assets/Youtube.svg";
+import SpotifyD from "./assets/Spotify.png";
 import { themes } from "../themecolorsStorage";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -46,14 +46,14 @@ function Aboutme({ palette }) {
             especially if you are interested in hardstyle type of music!
           </div>
         </div>
-        <div className="flex flex-col gap-[4px] items-center">
+        <div className="flex flex-col gap-[16px] items-center">
           <div
             className="font-InriaSerif text-4xl"
             style={{ color: palette.aboutmeText }}
           >
-            My streaming services:
+            My streaming services
           </div>
-          <div className="flex flex-row gap-[5px]">
+          <div className="flex flex-row gap-[16px]">
             <a
               href="https://music.apple.com/us/artist/kashiami/1777722735"
               target="_blank"
@@ -62,10 +62,7 @@ function Aboutme({ palette }) {
               <img
                 src={MusicD}
                 alt="Logo"
-                className="w-[100px] transition-transform duration-200 transform hover:scale-110"
-                style={{
-                  filter: `invert(${palette.icon === "#181818" ? 1 : 0})`,
-                }}
+                className="w-[88px] transition-transform duration-200 transform hover:scale-105"
               />
             </a>
             <a
@@ -76,10 +73,7 @@ function Aboutme({ palette }) {
               <img
                 src={YoutubeD}
                 alt="Logo"
-                className="w-[100px] transition-transform duration-200 transform hover:scale-110"
-                style={{
-                  filter: `invert(${palette.icon === "#181818" ? 1 : 0})`,
-                }}
+                className="w-[88px] transition-transform duration-200 transform hover:scale-105"
               />
             </a>
             <a
@@ -90,17 +84,14 @@ function Aboutme({ palette }) {
               <img
                 src={SpotifyD}
                 alt="Logo"
-                className="w-[100px] transition-transform duration-200 transform hover:scale-110"
-                style={{
-                  filter: `invert(${palette.icon === "#181818" ? 1 : 0})`,
-                }}
+                className="w-[88px] transition-transform duration-200 transform hover:scale-105"
               />
             </a>
           </div>
         </div>
         <Link to="/">
           <div
-            className="text-4xl font-InriaSerif mt-[64px] hover:underline"
+            className="text-3xl font-InriaSerif mt-[64px] hover:underline"
             style={{ color: palette.aboutmeText }}
           >
             Back to main page
