@@ -2,7 +2,7 @@ import LogoJ from './assets/Logoj.jpg';
 import MusicD from './assets/MusicD.png';
 import YoutubeD from './assets/YoutubeD.png';
 import SpotifyD from './assets/SpotifyD.png';
-import Newwave from './assets/newwave.png';
+import Newwave from './assets/newwave.jpg';
 
 export const cardStorage = [
   {
@@ -21,8 +21,8 @@ export const cardStorage = [
     streamText: "Check out my latest single:",
     links: [
       { url: 'https://music.apple.com/pl/album/new-wave-single/1840562785', img: MusicD },
-      { url: 'https://music.apple.com/pl/album/new-wave-single/1840562785', img: YoutubeD },
+      { url: 'https://www.youtube.com/watch?v=fkKJEUWPAzY&list=OLAK5uy_kSVZJyaUBTUUgtxXE6ixLo-_v5dG8xPZ0', img: YoutubeD },
       { url: 'https://open.spotify.com/album/1pRpyMMqdeTXaeTh2K4BCJ?si=C-y_gaylSGysTYEn9QHNsQ', img: SpotifyD }
     ]
-  }
+  },
 ];

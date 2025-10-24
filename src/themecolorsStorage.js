@@ -14,7 +14,7 @@ export const themes = {
   },
   dark: {
     bg: "#212121",
-    headerBg: "#000000",
+    headerBg: "#0a0a0aff",
     headerText: "#FFFFFF",
     icon: "#FFFFFF",
     cardStroke: "#FFFFFF",
@@ -22,7 +22,7 @@ export const themes = {
     cardIcon: "#FFFFFF",
     copyrightText: "#FFFFFF",
     navbarText: "#FFFFFF",
-    navbarBackground: "#000000",
+    navbarBackground: "#0a0a0aff",
     aboutmeText: "#FFFFFF"
 
   }
