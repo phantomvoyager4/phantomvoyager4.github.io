@@ -2,7 +2,6 @@ import Header from "../Components/Header";
 import Copyright from "../Components/Copyright";
 import Hello from "../Components/Hello";
 import Card from "../Components/Card";
-import Warning from "../Components/Warning";
 import Menu from "../Components/Navbar";
 import Playlist from "../Components/Playlist";
 import Songsdisplay from "../Components/Songsdisplay";
@@ -43,7 +42,6 @@ export function Home({ palette, toggleTheme }) {
         </div>
       </div>
       <Copyright palette={palette} />
-      <Warning />
     </>
   );
 }

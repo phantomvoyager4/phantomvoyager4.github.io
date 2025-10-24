@@ -1,7 +1,6 @@
 import Header from "../Components/Header";
 import Menu from "../Components/Navbar";
 import Aboutme from "../Components/Aboutme";
-import Warning from "../Components/Warning";
 import Copyright from "../Components/Copyright";
 import { useState } from "react";
 import { themes } from "../themecolorsStorage";
@@ -26,7 +25,6 @@ export function About({ palette, toggleTheme }) {
           <Aboutme palette={palette} />
         </div>
       </div>
-      <Warning />
       <Copyright palette={palette} />
     </div>
   );
