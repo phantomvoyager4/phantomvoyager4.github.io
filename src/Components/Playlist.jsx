@@ -26,7 +26,7 @@ function Playlist({ palette }) {
       animate={controls}
       transition={{ duration: 0.6 }}
     >
-      <div class="flex justify-center">
+      <div className="flex justify-center">
         <div className="w-[320px] h-[400px] flex flex-col items-center justify-center gap-[24px]">
           <div
             className="font-InriaSerif text-3xl text-center"
@@ -37,9 +37,10 @@ function Playlist({ palette }) {
           <a
             href="https://open.spotify.com/playlist/3Gnzznw2BNeJNdLLDwHVk4?si=909136bc753349fc"
             target="blank"
+            className="shadow-md transition-shadow duration-300 hover:shadow-xl" //add shadow here
           >
             <img
-              className="w-[280px] h-[280px] transition-transform duration-200 transform hover:scale-103"
+              className="w-[280px] h-[280px] transition-transform duration-200 transform hover:scale-103 shadow-lg hover:shadow-2xl shadow-black/40 rounded-lg" 
               src={PlaylistPhoto}
             />
           </a>

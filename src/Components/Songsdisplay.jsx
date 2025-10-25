@@ -48,7 +48,7 @@ function Songsdisplay({ palette }) {
               className="cursor-pointer"
             >
               <img
-                className="w-[280px] h-[280px] transition-transform duration-200 transform hover:scale-103"
+                className="w-[280px] h-[280px] transition-transform duration-200 transform hover:scale-103 shadow-lg hover:shadow-2xl shadow-black/40 rounded-lg"
                 src={Songscardstorage[idx].logo}
                 alt={Songscardstorage[idx].logoHref}
               />
