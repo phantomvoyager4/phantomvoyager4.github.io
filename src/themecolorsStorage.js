@@ -1,7 +1,7 @@
 export const themes = {
   light: {
-    bg: "#f2f2f2",
-    headerBg: "#e5e5e5",
+    bg: "#E4E2E2",
+    headerBg: "#d1d1d1",
     headerText: "#1f1f1f",
     icon: "#181818",
     cardStroke: "#181818",
