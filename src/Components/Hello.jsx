@@ -9,7 +9,7 @@ function Hello({ palette }) {
       transition={{ duration: 0.6 }}
     >
       <div
-        className="font-InriaSerif text-4xl"
+        className="font-InriaSerif text-4xl text-center"
         style={{ color: palette.copyrightText }}
       >
         Hello! I am kashiami, 21yo jumpstyle producent from Poland

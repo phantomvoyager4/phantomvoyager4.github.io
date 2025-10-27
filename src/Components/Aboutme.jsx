@@ -12,9 +12,9 @@ function Aboutme({ palette }) {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="flex flex-col items-center gap-[24px]">
+      <div className="flex flex-col items-center gap-[24px] px-[6px]">
         <div
-          className="font-InriaSerif text-4xl"
+          className="font-InriaSerif text-4xl text-center"
           style={{ color: palette.aboutmeText }}
         >
           Hello! Thank you for visiting my website
@@ -48,7 +48,7 @@ function Aboutme({ palette }) {
         </div>
         <div className="flex flex-col gap-[16px] items-center">
           <div
-            className="font-InriaSerif text-4xl"
+            className="font-InriaSerif text-4xl text-center"
             style={{ color: palette.aboutmeText }}
           >
             My streaming services

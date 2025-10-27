@@ -27,7 +27,7 @@ export function Home({ palette, toggleTheme }) {
           palette={palette}
         />
       </div>
-      <div className="flex flex-col items-center h-full pt-[146px]">
+      <div className="flex flex-col items-center h-full sm:pt-[146px] pt-[80px]">
         <div className="flex flex-col gap-[96px] pb-[64px]">
           <div className="flex flex-col items-center">
             <Hello palette={palette} />

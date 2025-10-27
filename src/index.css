@@ -14,5 +14,12 @@
   font-weight: 400;
 
   color: rgba(255, 255, 255, 0.87);
+  
+}
 
+.theme-transition {
+  transition: background-color 500ms ease, color 500ms ease;
+}
+.theme-transition * {
+  transition: border-color 500ms ease, box-shadow 400ms ease, filter 400ms ease;
 }

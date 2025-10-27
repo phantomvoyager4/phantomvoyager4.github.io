@@ -9,13 +9,13 @@ function App() {
   const palette = themes[theme];
 
   return (
-    <div style={{ backgroundColor: palette.bg, minHeight: "100vh" }}>
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home palette={palette} toggleTheme={() => setTheme(theme === "dark" ? "light" : "dark")}/>} />
-        <Route path="/about" element={<About palette={palette} toggleTheme={() => setTheme(theme === "dark" ? "light" : "dark")}/>} />
-      </Routes>
-    </Router>
+  <div className="theme-transition" style={{ backgroundColor: palette.bg, minHeight: "100vh", width: "100%", overflowX: "hidden" }}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home palette={palette} toggleTheme={() => setTheme(theme === "dark" ? "light" : "dark")}/>} />
+          <Route path="/about" element={<About palette={palette} toggleTheme={() => setTheme(theme === "dark" ? "light" : "dark")}/>} />
+        </Routes>
+      </Router>
     </div>
   );
 }

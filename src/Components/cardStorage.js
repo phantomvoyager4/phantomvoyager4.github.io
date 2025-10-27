@@ -8,7 +8,7 @@ export const cardStorage = [
   {
     logo: LogoJ,
     logoHref: "https://linktr.ee/kashiami",
-    streamText: "Stream My Music:",
+    streamText: "Stream My Music",
     links: [
       { url: 'https://music.youtube.com/channel/UC-Cs85x5T2AQ5db0cKAMWuA', img: Youtube },
       { url: 'https://music.apple.com/us/artist/kashiami/1777722735', img: Music },
@@ -18,7 +18,7 @@ export const cardStorage = [
   {
     logo: Newwave,
     logoHref: "https://www.youtube.com/watch?v=fkKJEUWPAzY&list=OLAK5uy_kSVZJyaUBTUUgtxXE6ixLo-_v5dG8xPZ0",
-    streamText: "Check out my latest single:",
+    streamText: "Check out my latest single",
     links: [
       { url: 'https://music.youtube.com/playlist?list=OLAK5uy_lERrBUJRGT1QCxNEx-Qj6HEOgLiv4qT2I', img: Youtube },
       { url: 'https://music.apple.com/pl/album/new-wave-single/1840562785', img: Music },

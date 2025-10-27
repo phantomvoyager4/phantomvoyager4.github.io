@@ -37,10 +37,10 @@ function Playlist({ palette }) {
           <a
             href="https://open.spotify.com/playlist/3Gnzznw2BNeJNdLLDwHVk4?si=909136bc753349fc"
             target="blank"
-            className="shadow-md transition-shadow duration-300 hover:shadow-xl" //add shadow here
+            className="shadow-md transition-shadow duration-300 hover:shadow-xl"
           >
             <img
-              className="w-[280px] h-[280px] transition-transform duration-200 transform hover:scale-103 shadow-lg hover:shadow-2xl shadow-black/40 rounded-lg" 
+              className="w-[280px] transition-transform duration-200 transform hover:scale-103 shadow-lg hover:shadow-2xl shadow-black/40 rounded-lg"
               src={PlaylistPhoto}
             />
           </a>
