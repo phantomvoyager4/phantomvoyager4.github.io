@@ -6,6 +6,7 @@
 
 @theme{
   --font-InriaSerif: InriaSerif, "sans-serif";
+  --breakpoint-xs: 450px;
 }
 
 :root {

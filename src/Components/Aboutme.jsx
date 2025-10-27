@@ -12,7 +12,7 @@ function Aboutme({ palette }) {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="flex flex-col items-center gap-[24px] px-[6px]">
+      <div className="flex flex-col items-center gap-[24px] px-[6px] max-sm:pt-[40px] max-sm:pb-[64px]">
         <div
           className="font-InriaSerif text-4xl text-center"
           style={{ color: palette.aboutmeText }}
