@@ -5,7 +5,7 @@ import { themes } from "../themecolorsStorage";
 function Menu({ open, onClose, palette }) {
   return (
     <nav
-      className={`fixed top-0 left-0 w-50 h-full z-50 transition-transform duration-300 ${
+      className={`fixed top-0 left-0 w-50 sm:h-full h-[200px] z-50 transition-transform duration-300 ${
         open ? "translate-x-0" : "-translate-x-full"
       }`}
       style={{ backgroundColor: palette.navbarBackground }}
