@@ -1,6 +1,6 @@
-import burger from "./assets/burger.png";
-import lightmode from "./assets/lightmode.png";
-import darkmode from "./assets/darkmode.png";
+import burger from "./assets/burger.svg";
+import lightmode from "./assets/lightmode.svg";
+import darkmode from "./assets/darkmode.svg";
 import { Link } from "react-router-dom";
 import { themes } from "../themecolorsStorage";
 
@@ -10,21 +10,21 @@ function Header({ onBurgerClick, onNightmodeClick, palette }) {
 
   return (
     <header
-      className="fixed top-0 left-0 w-full sm:h-[104px] h-[64px] flex items-center justify-between px-4 sm:px-[24px] "
+      className="fixed top-0 left-0 w-full sm:h-[88px] h-[56px] flex items-center justify-between px-4 sm:px-[24px] "
       style={{ backgroundColor: palette.headerBg }}
     >
       <div className="flex items-center flex-shrink-0">
         <img
           src={burger}
           alt="Burger"
-          className="w-16 sm:w-20 md:w-24 cursor-pointer hover:scale-101 flex-shrink-0"
+          className="w-16 sm:w-18 md:w-22 cursor-pointer hover:scale-101 flex-shrink-0"
           style={{ filter: `invert(${palette.icon === "#181818" ? 1 : 0})` }}
           onClick={onBurgerClick}
         />
       </div>
       <Link to="/" className="flex-1 flex justify-center min-w-0">
         <div
-          className="font-InriaSerif text-4xl sm:text-6xl md:text-8xl text-center truncate"
+          className="font-InriaSerif text-3xl sm:text-5xl md:text-7xl text-center truncate"
           style={{ color: palette.headerText }}
         >
           Kashiami
