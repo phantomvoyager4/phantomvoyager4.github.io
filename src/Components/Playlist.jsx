@@ -42,6 +42,7 @@ function Playlist({ palette }) {
             <img
               className="w-[280px] transition-transform duration-200 transform hover:scale-103 shadow-lg hover:shadow-2xl shadow-black/40 rounded-lg"
               src={PlaylistPhoto}
+              alt="Kashiami's songs"
             />
           </a>
         </div>
