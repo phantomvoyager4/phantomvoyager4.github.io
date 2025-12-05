@@ -6,6 +6,7 @@ import Menu from "../Components/Navbar";
 import Playlist from "../Components/Playlist";
 import Songsdisplay from "../Components/Songsdisplay";
 import ContactForm from "../Components/ContactForm";
+import ScrollIndicator from "../Components/ScrollIndicator";
 import { useState } from "react";
 
 export function Home({ palette, toggleTheme }) {
@@ -43,6 +44,7 @@ export function Home({ palette, toggleTheme }) {
         </div>
       </div>
       <Copyright palette={palette} />
+      <ScrollIndicator palette={palette} />
     </>
   );
 }

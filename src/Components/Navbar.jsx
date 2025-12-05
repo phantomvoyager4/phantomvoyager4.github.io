@@ -2,29 +2,11 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import { useScrollLock } from "./useScrollLock";
 
 function Menu({ open, onClose, palette }) {
-  // Prevent body scroll when menu is open
-  useEffect(() => {
-    const originalOverflow = document.body.style.overflow;
-    const originalPaddingRight = document.body.style.paddingRight;
-
-    if (open) {
-      // Calculate scrollbar width to prevent layout shift
-      const scrollBarWidth =
-        window.innerWidth - document.documentElement.clientWidth;
-      document.body.style.overflow = "hidden";
-      document.body.style.paddingRight = `${scrollBarWidth}px`;
-    } else {
-      document.body.style.overflow = originalOverflow;
-      document.body.style.paddingRight = originalPaddingRight;
-    }
-
-    return () => {
-      document.body.style.overflow = originalOverflow;
-      document.body.style.paddingRight = originalPaddingRight;
-    };
-  }, [open]);
+  // Use stable scroll lock hook
+  useScrollLock(open);
 
   // Close menu on Escape key
   useEffect(() => {
@@ -178,7 +160,7 @@ function Menu({ open, onClose, palette }) {
 
           {/* Menu Container */}
           <motion.nav
-            className="fixed top-16 sm:top-20 left-2 sm:left-4 w-64 sm:w-72 rounded-2xl shadow-2xl z-50 overflow-hidden"
+            className="fixed top-14 sm:top-16 left-4 sm:left-6 w-64 sm:w-72 rounded-2xl shadow-2xl z-50 overflow-hidden"
             style={{
               backgroundColor: palette.navbarBackground,
               border: `1px solid ${palette.cardStroke}40`,

@@ -1,5 +1,5 @@
 import Newwave from './assets/newwave.jpg';
-import Penumbra from './assets/penumbra.jpg';
+import Voyager from './assets/voyagerbootleg.jpg';
 import Orlean from './assets/orlean.jpg';
 
 export const Songscardstorage = [
@@ -8,8 +8,8 @@ export const Songscardstorage = [
     logoHref: "https://www.youtube.com/watch?v=fkKJEUWPAzY&list=OLAK5uy_kSVZJyaUBTUUgtxXE6ixLo-_v5dG8xPZ0",
   },
   {
-    logo: Penumbra,
-    logoHref: "https://www.youtube.com/watch?v=0sYTp5ZvdZo&list=OLAK5uy_lFyjY17jQ-09gw21XHktQn2WM2g1mzaFU",
+    logo: Voyager,
+    logoHref: "https://music.youtube.com/playlist?list=OLAK5uy_mMhAmlgHeerT8bqjotQWv_j22xUXf3quk",
   },
   {
     logo: Orlean,

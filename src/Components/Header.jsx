@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
-function Header({ onBurgerClick, onNightmodeClick, palette }) {
+function Header({ onBurgerClick, onNightmodeClick, palette, menuOpen }) {
   const modeIcon = palette.icon === "#181818" ? darkmode : lightmode;
   const modeAlt = palette.icon === "#181818" ? "Darkmode" : "Lightmode";
 
@@ -14,21 +14,50 @@ function Header({ onBurgerClick, onNightmodeClick, palette }) {
 
   return (
     <header
-      className="fixed top-0 left-0 w-full sm:h-[88px] h-[56px] grid grid-cols-3 items-center px-4 sm:px-[24px] z-40"
-      style={{ backgroundColor: palette.headerBg }}
+      className="fixed top-0 left-0 sm:h-[88px] h-[56px] grid grid-cols-3 items-center px-4 sm:px-[24px] z-40"
+      style={{
+        backgroundColor: palette.headerBg,
+        width: "100vw",
+        right: 0,
+      }}
     >
       {/* Left side - Burger menu */}
       <div className="flex items-center justify-start">
-        <motion.img
-          src={burger}
-          alt="Menu"
-          className="w-12 sm:w-14 md:w-16 cursor-pointer flex-shrink-0"
-          style={{ filter: `invert(${palette.icon === "#181818" ? 1 : 0})` }}
+        <motion.div
+          className="relative p-2 rounded-lg cursor-pointer flex-shrink-0 transition-all duration-200"
           onClick={onBurgerClick}
-          whileHover={{ scale: 1.1 }}
+          animate={{
+            backgroundColor: menuOpen
+              ? palette.icon === "#181818"
+                ? "rgba(255, 255, 255, 0.15)"
+                : "rgba(0, 0, 0, 0.1)"
+              : "transparent",
+            borderColor: menuOpen ? `${palette.cardStroke}40` : "transparent",
+          }}
+          whileHover={{
+            scale: 1.05,
+            backgroundColor:
+              palette.icon === "#181818"
+                ? "rgba(255, 255, 255, 0.2)"
+                : "rgba(0, 0, 0, 0.15)",
+          }}
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
-        />
+          style={{
+            border: `1px solid ${menuOpen ? `${palette.cardStroke}40` : "transparent"}`,
+          }}
+        >
+          <motion.img
+            src={burger}
+            alt="Menu"
+            className="w-8 sm:w-10 md:w-12"
+            style={{ filter: `invert(${palette.icon === "#181818" ? 1 : 0})` }}
+            animate={{
+              rotate: menuOpen ? 90 : 0,
+            }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          />
+        </motion.div>
       </div>
 
       {/* Center - Logo */}

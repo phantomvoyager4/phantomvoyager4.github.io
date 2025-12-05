@@ -2,7 +2,7 @@ import LogoJ from "./assets/Logoj.jpg";
 import Music from "./assets/Music.svg";
 import Youtube from "./assets/Youtube.svg";
 import Spotify from "./assets/Spotify.png";
-import Newwave from "./assets/newwave.jpg";
+import Voyager from "./assets/voyagerbootleg.jpg"
 
 // Environment variables with fallbacks
 const config = {
@@ -20,13 +20,13 @@ const config = {
   latestSingle: {
     youtube:
       import.meta.env.VITE_LATEST_SINGLE_YOUTUBE ||
-      "https://music.youtube.com/playlist?list=OLAK5uy_lERrBUJRGT1QCxNEx-Qj6HEOgLiv4qT2I",
+      "https://music.youtube.com/playlist?list=OLAK5uy_mMhAmlgHeerT8bqjotQWv_j22xUXf3quk",
     apple:
       import.meta.env.VITE_LATEST_SINGLE_APPLE ||
-      "https://music.apple.com/pl/album/new-wave-single/1840562785",
+      "https://music.apple.com/us/song/voyager-bootleg/1856574024",
     spotify:
       import.meta.env.VITE_LATEST_SINGLE_SPOTIFY ||
-      "https://open.spotify.com/album/1pRpyMMqdeTXaeTh2K4BCJ?si=C-y_gaylSGysTYEn9QHNsQ",
+      "https://open.spotify.com/album/0yQhIs7du9CT5kmQzkvAFD?si=ocxezCG1SneHR1KHvBEngg",
   },
 };
 
@@ -82,11 +82,11 @@ export const cardStorage = [
   },
   {
     id: "latest-single",
-    logo: Newwave,
+    logo: Voyager,
     logoHref:
-      "https://www.youtube.com/watch?v=fkKJEUWPAzY&list=OLAK5uy_kSVZJyaUBTUUgtxXE6ixLo-_v5dG8xPZ0",
+      "https://music.youtube.com/playlist?list=OLAK5uy_mMhAmlgHeerT8bqjotQWv_j22xUXf3quk",
     streamText: "Check out my latest single",
-    description: "New Wave - My latest musical creation",
+    description: "Voyager Bootleg - My latest musical creation",
     links: [
       {
         platform: "youtube",

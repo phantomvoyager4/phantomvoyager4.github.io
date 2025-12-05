@@ -13,7 +13,7 @@ function Aboutme({ palette }) {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="flex flex-col items-center gap-[24px] px-[6px] max-sm:pt-[40px] max-sm:pb-[64px]">
+      <div className="flex flex-col items-center gap-[24px] px-[6px] max-sm:pt-[40px] max-sm:pb-[64px] w-full max-w-4xl mx-auto">
         <motion.div
           className="font-InriaSerif text-4xl sm:text-5xl text-center mb-8"
           style={{ color: palette.aboutmeText }}
@@ -26,13 +26,13 @@ function Aboutme({ palette }) {
 
         {/* Introduction Section */}
         <motion.div
-          className="flex flex-col gap-8 max-w-4xl"
+          className="flex flex-col gap-8 w-full"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           <div
-            className="bg-opacity-10 rounded-2xl p-6 backdrop-blur-sm"
+            className="about-content-box bg-opacity-10 rounded-2xl p-6 backdrop-blur-sm"
             style={{
               backgroundColor: `${palette.cardIcon}10`,
               border: `1px solid ${palette.cardIcon}20`,
@@ -60,7 +60,7 @@ function Aboutme({ palette }) {
           </div>
 
           <div
-            className="bg-opacity-10 rounded-2xl p-6 backdrop-blur-sm"
+            className="about-content-box bg-opacity-10 rounded-2xl p-6 backdrop-blur-sm"
             style={{
               backgroundColor: `${palette.cardIcon}10`,
               border: `1px solid ${palette.cardIcon}20`,

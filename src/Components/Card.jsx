@@ -4,7 +4,7 @@ import strzalkaDP from "./assets/strzalkaDP.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCarousel } from "./useCarousel.jsx";
 import OptimizedImage from "./OptimizedImage";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Card({ palette }) {
   const {
@@ -23,6 +23,7 @@ function Card({ palette }) {
   const [isHoveringCard, setIsHoveringCard] = useState(false);
   const [hoveredLink, setHoveredLink] = useState(null);
   const [isHoveringImage, setIsHoveringImage] = useState(false);
+  const [showSwipeIndicator, setShowSwipeIndicator] = useState(false);
 
   // Platform-specific hover colors
   const getPlatformHoverColor = (link, index) => {
@@ -32,6 +33,31 @@ function Card({ palette }) {
       2: "#1DB954", // Spotify
     };
     return platformColors[index] || palette.cardIcon;
+  };
+
+  // Control swipe indicator visibility
+  useEffect(() => {
+    if (isMobile && totalCards > 1) {
+      // Show indicator after initial load
+      const showTimer = setTimeout(() => {
+        setShowSwipeIndicator(true);
+      }, 2000);
+
+      // Hide indicator after some time
+      const hideTimer = setTimeout(() => {
+        setShowSwipeIndicator(false);
+      }, 8000);
+
+      return () => {
+        clearTimeout(showTimer);
+        clearTimeout(hideTimer);
+      };
+    }
+  }, [isMobile, totalCards]);
+
+  // Hide indicator when user interacts
+  const handleCardInteraction = () => {
+    setShowSwipeIndicator(false);
   };
 
   return (
@@ -107,7 +133,14 @@ function Card({ palette }) {
                 drag={totalCards > 1 ? "x" : false}
                 dragConstraints={{ left: 0, right: 0 }}
                 dragElastic={0.2}
-                onDragEnd={totalCards > 1 ? handleDragEnd : undefined}
+                onDragEnd={
+                  totalCards > 1
+                    ? (e, info) => {
+                        handleDragEnd(e, info);
+                        handleCardInteraction();
+                      }
+                    : undefined
+                }
               >
                 <motion.div
                   className="w-full h-full flex flex-col items-center justify-center gap-6 p-6 max-[550px]:gap-4 max-[550px]:p-4"
@@ -286,29 +319,30 @@ function Card({ palette }) {
             )}
 
             {/* Swipe Indicator for Mobile */}
-            {isMobile && (
+            {isMobile && showSwipeIndicator && totalCards > 1 && (
               <motion.div
                 className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-1"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 1.5 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
               >
                 <motion.div
                   className="w-1 h-1 rounded-full"
-                  style={{ backgroundColor: palette.cardIcon }}
-                  animate={{ opacity: [0.3, 1, 0.3] }}
+                  style={{ backgroundColor: `${palette.cardIcon}60` }}
+                  animate={{ opacity: [0.3, 0.8, 0.3] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
                 />
                 <motion.div
                   className="w-1 h-1 rounded-full"
-                  style={{ backgroundColor: palette.cardIcon }}
-                  animate={{ opacity: [0.3, 1, 0.3] }}
+                  style={{ backgroundColor: `${palette.cardIcon}60` }}
+                  animate={{ opacity: [0.3, 0.8, 0.3] }}
                   transition={{ duration: 1.5, repeat: Infinity, delay: 0.2 }}
                 />
                 <motion.div
                   className="w-1 h-1 rounded-full"
-                  style={{ backgroundColor: palette.cardIcon }}
-                  animate={{ opacity: [0.3, 1, 0.3] }}
+                  style={{ backgroundColor: `${palette.cardIcon}60` }}
+                  animate={{ opacity: [0.3, 0.8, 0.3] }}
                   transition={{ duration: 1.5, repeat: Infinity, delay: 0.4 }}
                 />
               </motion.div>
