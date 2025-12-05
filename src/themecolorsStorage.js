@@ -10,20 +10,19 @@ export const themes = {
     copyrightText: "#1f1f1f",
     navbarText: "#181818",
     navbarBackground: "#e5e5e5",
-    aboutmeText: "#181818"
+    aboutmeText: "#181818",
   },
   dark: {
-    bg: "#212121",
-    headerBg: "#0a0a0aff",
-    headerText: "#FFFFFF",
-    icon: "#FFFFFF",
-    cardStroke: "#FFFFFF",
-    cardText: "#FFFFFF",
-    cardIcon: "#FFFFFF",
-    copyrightText: "#FFFFFF",
-    navbarText: "#FFFFFF",
-    navbarBackground: "#0a0a0aff",
-    aboutmeText: "#FFFFFF"
-
-  }
+    bg: "#1a1a1a",
+    headerBg: "#0f0f0f",
+    headerText: "#e5e5e5",
+    icon: "#e5e5e5",
+    cardStroke: "#d1d1d1",
+    cardText: "#e5e5e5",
+    cardIcon: "#d1d1d1",
+    copyrightText: "#e5e5e5",
+    navbarText: "#e5e5e5",
+    navbarBackground: "#141414",
+    aboutmeText: "#e5e5e5",
+  },
 };

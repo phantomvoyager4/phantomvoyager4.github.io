@@ -3,7 +3,6 @@ import Menu from "../Components/Navbar";
 import Aboutme from "../Components/Aboutme";
 import Copyright from "../Components/Copyright";
 import { useState } from "react";
-import { themes } from "../themecolorsStorage";
 
 export function About({ palette, toggleTheme }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,10 +19,8 @@ export function About({ palette, toggleTheme }) {
         onClose={() => setMenuOpen(false)}
         palette={palette}
       />
-      <div className="flex h-screen pt-[64px]">
-        <div className="m-auto">
-          <Aboutme palette={palette} />
-        </div>
+      <div className="min-h-screen pt-[88px] sm:pt-[120px] pb-8">
+        <Aboutme palette={palette} />
       </div>
       <Copyright palette={palette} />
     </div>

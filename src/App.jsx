@@ -1,22 +1,58 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import { Home } from "./Pages/home";
-import { About } from "./Pages/zaboutme";
-import { useState } from "react";
-import { themes } from "./themecolorsStorage";
+import { lazy, Suspense } from "react";
+import { ThemeProvider, useTheme } from "./contexts/ThemeContext";
+import ErrorBoundary from "./Components/ErrorBoundary";
+import { FullPageLoader, MusicLoader } from "./Components/LoadingSpinner";
 
-function App() {
-  const [theme, setTheme] = useState("dark");
-  const palette = themes[theme];
+// Lazy load page components
+const Home = lazy(() =>
+  import("./Pages/home").then((module) => ({ default: module.Home })),
+);
+const About = lazy(() =>
+  import("./Pages/zaboutme").then((module) => ({ default: module.About })),
+);
+
+// Main App component wrapped with theme context
+function AppContent() {
+  const { palette, toggleTheme } = useTheme();
 
   return (
-  <div className="theme-transition" style={{ backgroundColor: palette.bg, minHeight: "100vh", width: "100%", overflowX: "hidden" }}>
+    <div
+      className="theme-transition"
+      style={{
+        backgroundColor: palette.bg,
+        minHeight: "100vh",
+        width: "100%",
+        overflowX: "hidden",
+      }}
+    >
       <Router>
-        <Routes>
-          <Route path="/" element={<Home palette={palette} toggleTheme={() => setTheme(theme === "dark" ? "light" : "dark")}/>} />
-          <Route path="/about" element={<About palette={palette} toggleTheme={() => setTheme(theme === "dark" ? "light" : "dark")}/>} />
-        </Routes>
+        <Suspense
+          fallback={<FullPageLoader text="Loading..." variant="pulse" />}
+        >
+          <Routes>
+            <Route
+              path="/"
+              element={<Home palette={palette} toggleTheme={toggleTheme} />}
+            />
+            <Route
+              path="/about"
+              element={<About palette={palette} toggleTheme={toggleTheme} />}
+            />
+          </Routes>
+        </Suspense>
       </Router>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <ErrorBoundary>
+      <ThemeProvider>
+        <AppContent />
+      </ThemeProvider>
+    </ErrorBoundary>
   );
 }
 

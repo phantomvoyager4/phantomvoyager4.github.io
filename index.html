@@ -1,22 +1,205 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta name="google-site-verification" content="P3rii4615w87isd2QbT7HkkuLNIaqdPcE1pbpaNZx-E" />
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Website for Kashiami - Jumpstyle music producer">
-    <meta name="keywords" content="Jumpstyle, Kashiami, Music, Kashiami4, AnxietyBootleg">
-    <meta name="author" content="Kashiami">
-    <title>Kashiami</title>
-    <link href="/src/style.css" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<html lang="en" itemscope itemtype="https://schema.org/MusicGroup">
+    <head>
+        <meta
+            name="google-site-verification"
+            content="P3rii4615w87isd2QbT7HkkuLNIaqdPcE1pbpaNZx-E"
+        />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Kashiami</title>
+        <meta
+            name="title"
+            content="Kashiami - Polish Jumpstyle & Hardstyle Music Producer | Official Website"
+        />
+        <meta
+            name="description"
+            content="Official website of Kashiami, a young Polish jumpstyle and hardstyle music producer. Stream my latest tracks on Spotify, Apple Music & YouTube. 30k+ monthly listeners, 200k+ plays on my hit single New Wave. Contact for collaborations."
+        />
+        <meta
+            name="keywords"
+            content="Kashiami, jumpstyle, hardstyle, music producer, Poland, Polish music, EDM, electronic music, New Wave, Spotify artist, YouTube Music, Apple Music, music streaming, DJ, dance music, electronic dance music, jumpstyle producer, hardstyle producer, music collaboration, original music, Kashiami4, AnxietyBootleg"
+        />
+        <meta name="author" content="Kashiami" />
+        <meta
+            name="robots"
+            content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+        <link rel="canonical" href="https://kashiami.com/" />
+
+        <!-- Open Graph / Facebook Meta Tags -->
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Kashiami Official" />
+        <meta property="og:url" content="https://kashiami.com/" />
+        <meta
+            property="og:title"
+            content="Kashiami - Polish Jumpstyle & Hardstyle Music Producer"
+        />
+        <meta
+            property="og:description"
+            content="Official website of Kashiami, a young Polish jumpstyle and hardstyle music producer. Stream my latest tracks on Spotify, Apple Music & YouTube. 30k+ monthly listeners."
+        />
+        <meta property="og:image" content="https://kashiami.com/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta
+            property="og:image:alt"
+            content="Kashiami - Polish Jumpstyle Music Producer"
+        />
+        <meta property="og:locale" content="en_US" />
+
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://kashiami.com/" />
+        <meta
+            name="twitter:title"
+            content="Kashiami - Polish Jumpstyle & Hardstyle Music Producer"
+        />
+        <meta
+            name="twitter:description"
+            content="Official website of Kashiami, a young Polish jumpstyle and hardstyle music producer. Stream my latest tracks on Spotify, Apple Music & YouTube."
+        />
+        <meta
+            name="twitter:image"
+            content="https://kashiami.com/og-image.jpg"
+        />
+        <meta
+            name="twitter:image:alt"
+            content="Kashiami - Polish Jumpstyle Music Producer"
+        />
+        <meta name="twitter:creator" content="@kashiami" />
+
+        <!-- Music Specific Meta Tags -->
+        <meta property="music:musician" content="https://kashiami.com/" />
+        <meta property="music:genre" content="Jumpstyle" />
+        <meta property="music:genre" content="Hardstyle" />
+        <meta property="music:genre" content="Electronic Dance Music" />
+
+        <!-- Additional SEO Meta Tags -->
+        <meta name="theme-color" content="#181818" />
+        <meta name="msapplication-TileColor" content="#181818" />
+        <meta name="application-name" content="Kashiami Official" />
+        <meta name="apple-mobile-web-app-title" content="Kashiami" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent"
+        />
+
+        <!-- Favicon and Icons -->
+        <link
+            rel="icon"
+            type="image/png"
+            href="/favicon-96x96.png"
+            sizes="96x96"
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+
+        <!-- Preconnect for Performance -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://open.spotify.com" />
+        <link rel="preconnect" href="https://music.apple.com" />
+        <link rel="preconnect" href="https://music.youtube.com" />
+
+        <!-- CSS -->
+        <link href="/src/style.css" rel="stylesheet" />
+
+        <!-- Structured Data (JSON-LD) -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "MusicGroup",
+                "name": "Kashiami",
+                "alternateName": ["Kashiami4", "AnxietyBootleg"],
+                "description": "Polish jumpstyle and hardstyle music producer with 30k+ monthly listeners on Spotify. Known for hit single 'New Wave' with 200k+ plays.",
+                "url": "https://kashiami.com/",
+                "sameAs": [
+                    "https://open.spotify.com/artist/7yFxrWhhvzk9OQz2aTIhul",
+                    "https://music.apple.com/us/artist/kashiami/1777722735",
+                    "https://music.youtube.com/channel/UC-Cs85x5T2AQ5db0cKAMWuA",
+                    "https://www.youtube.com/@kashiami4",
+                    "https://linktr.ee/kashiami",
+                    "https://github.com/phantomvoyager4/phantomvoyager4.github.io"
+                ],
+                "genre": ["Jumpstyle", "Hardstyle", "Electronic Dance Music"],
+                "foundingLocation": {
+                    "@type": "Country",
+                    "name": "Poland"
+                },
+                "member": {
+                    "@type": "Person",
+                    "name": "Kashiami",
+                    "jobTitle": "Music Producer",
+                    "email": "obywatelnumer04230@gmail.com"
+                },
+                "album": [
+                    {
+                        "@type": "MusicAlbum",
+                        "name": "New Wave",
+                        "datePublished": "2024",
+                        "url": "https://open.spotify.com/album/1pRpyMMqdeTXaeTh2K4BCJ"
+                    }
+                ],
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "email": "obywatelnumer04230@gmail.com",
+                    "contactType": "Business Inquiries"
+                }
+            }
+        </script>
+
+        <!-- Additional Structured Data for Website -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "Kashiami Official Website",
+                "url": "https://kashiami.com/",
+                "description": "Official website of Polish jumpstyle and hardstyle music producer Kashiami",
+                "author": {
+                    "@type": "Person",
+                    "name": "Kashiami"
+                },
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://kashiami.com/?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            // Set dark theme immediately to prevent flash of light content
+            (function () {
+                try {
+                    const savedTheme = localStorage.getItem("kashiami-theme");
+                    const theme =
+                        savedTheme === "light" || savedTheme === "dark"
+                            ? savedTheme
+                            : "dark";
+                    document.documentElement.setAttribute("data-theme", theme);
+                    document.documentElement.style.backgroundColor =
+                        theme === "dark" ? "#1a1a1a" : "#E4E2E2";
+                } catch (e) {
+                    // Fallback to dark theme if localStorage fails
+                    document.documentElement.setAttribute("data-theme", "dark");
+                    document.documentElement.style.backgroundColor = "#1a1a1a";
+                }
+            })();
+        </script>
+        <div id="root"></div>
+        <script type="module" src="/src/main.jsx"></script>
+    </body>
 </html>

@@ -1,13 +1,43 @@
 {
   "name": "kashiami",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Official website of Kashiami - Artist, Music Producer, and Creative",
+  "author": {
+    "name": "Kashiami",
+    "email": "obywatelnumer04230@gmail.com",
+    "url": "https://linktr.ee/kashiami"
+  },
+  "homepage": "https://phantomvoyager4.github.io/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phantomvoyager4/phantomvoyager4.github.io"
+  },
+  "keywords": [
+    "music",
+    "artist",
+    "portfolio",
+    "react",
+    "vite",
+    "tailwindcss",
+    "framer-motion"
+  ],
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "build:analyze": "vite build --mode analyze",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "preview": "vite preview",
+    "preview:build": "npm run build && npm run preview",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "test": "echo \"No tests specified\" && exit 0",
+    "deploy": "npm run build && gh-pages -d dist",
+    "start": "npm run dev"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
