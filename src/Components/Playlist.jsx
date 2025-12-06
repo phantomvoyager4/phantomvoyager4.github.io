@@ -49,14 +49,14 @@ function Playlist({ palette }) {
               transition={{ duration: 0.3 }}
             >
               <img
-                className="w-[280px] rounded-lg group-hover:blur-sm transition-all duration-300"
+                className="w-[280px] rounded-lg transition-all duration-300"
                 src={PlaylistPhoto}
                 alt="Kashiami's songs"
               />
 
               {/* Hover Overlay */}
               <motion.div
-                className="absolute inset-0 flex items-center justify-center rounded-lg backdrop-blur-sm"
+                className="absolute inset-0 flex items-center justify-center rounded-lg"
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}

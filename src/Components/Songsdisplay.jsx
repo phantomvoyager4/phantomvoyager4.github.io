@@ -61,7 +61,7 @@ function Songsdisplay({ palette }) {
 
                 {/* Hover Overlay */}
                 <motion.div
-                  className="absolute inset-0 flex items-center justify-center rounded-lg backdrop-blur-sm"
+                  className="absolute inset-0 flex items-center justify-center rounded-lg"
                   initial={{ opacity: 0 }}
                   whileHover={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}

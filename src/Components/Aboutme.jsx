@@ -181,9 +181,9 @@ function Aboutme({ palette }) {
               className="px-8 py-3 rounded-full font-InriaSerif text-lg font-medium border-2 transition-all duration-300 hover:shadow-lg"
               style={{
                 backgroundColor:
-                  palette.icon === "#181818" ? palette.headerBg : palette.icon,
+                  palette.icon === "#000000ff" ? palette.headerBg : palette.icon,
                 color:
-                  palette.icon === "#181818" ? palette.icon : palette.headerBg,
+                  palette.icon === "#000000ff" ? palette.icon : palette.headerBg,
                 borderColor: palette.icon,
               }}
               whileHover={{

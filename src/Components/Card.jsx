@@ -90,7 +90,7 @@ function Card({ palette }) {
           onHoverEnd={() => setIsHoveringCard(false)}
         >
           <motion.div
-            className="sm:w-[650px] w-[500px] sm:h-[650px] h-[500px] relative overflow-hidden flex items-center flex-col rounded-3xl shadow-2xl backdrop-blur-sm max-[550px]:w-[calc(100vw-64px)] max-[550px]:h-[calc(100vw-64px)] max-[550px]:aspect-square max-[400px]:w-[calc(100vw-32px)] max-[400px]:h-[calc(100vw-32px)]"
+            className="sm:w-[650px] w-[500px] sm:h-[650px] h-[500px] relative overflow-hidden flex items-center flex-col rounded-3xl shadow-xl backdrop-blur-sm max-[550px]:w-[calc(100vw-64px)] max-[550px]:h-[calc(100vw-64px)] max-[550px]:aspect-square max-[400px]:w-[calc(100vw-32px)] max-[400px]:h-[calc(100vw-32px)]"
             style={{
               background:
                 palette.icon === "#181818"
@@ -102,7 +102,6 @@ function Card({ palette }) {
                 : `0 10px 25px -5px ${palette.bg}40, 0 0 0 1px ${palette.cardIcon}10`,
             }}
             animate={{
-              y: isHoveringCard ? -8 : 0,
               rotateX: isHoveringCard ? 2 : 0,
               rotateY: isHoveringCard ? 1 : 0,
             }}
@@ -171,9 +170,6 @@ function Card({ palette }) {
                   >
                     <div className="relative overflow-hidden rounded-2xl shadow-lg">
                       <motion.div
-                        animate={{
-                          filter: isHoveringImage ? "blur(4px)" : "blur(0px)",
-                        }}
                         transition={{ duration: 0.3 }}
                       >
                         <OptimizedImage

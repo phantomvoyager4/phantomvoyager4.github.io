@@ -110,7 +110,7 @@ function Header({ onBurgerClick, onNightmodeClick, palette, menuOpen }) {
           whileTap={{ scale: 0.95 }}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
         >
-          <span className="font-InriaSerif">Listen Now</span>
+          <span className="font-InriaSerif text-[16px]">Listen Now</span>
         </motion.a>
 
         {/* Mobile CTA - Icon only */}
