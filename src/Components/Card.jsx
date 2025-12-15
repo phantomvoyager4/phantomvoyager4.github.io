@@ -98,7 +98,7 @@ function Card({ palette }) {
                   : `linear-gradient(135deg, ${palette.headerBg}95, ${palette.navbarBackground}95)`,
               border: `2px solid ${palette.cardIcon}30`,
               boxShadow: isHoveringCard
-                ? `0 25px 50px -12px ${palette.cardIcon}40, 0 0 0 1px ${palette.cardIcon}20`
+                ? `0 0px 30px -12px ${palette.cardIcon}40, 0 0 0 1px ${palette.cardIcon}20`
                 : `0 10px 25px -5px ${palette.bg}40, 0 0 0 1px ${palette.cardIcon}10`,
             }}
             animate={{

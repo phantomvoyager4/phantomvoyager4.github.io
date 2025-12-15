@@ -4,7 +4,6 @@ import { ThemeProvider, useTheme } from "./contexts/ThemeContext";
 import ErrorBoundary from "./Components/ErrorBoundary";
 import { FullPageLoader, MusicLoader } from "./Components/LoadingSpinner";
 
-// Lazy load page components
 const Home = lazy(() =>
   import("./Pages/home").then((module) => ({ default: module.Home })),
 );
@@ -12,7 +11,6 @@ const About = lazy(() =>
   import("./Pages/zaboutme").then((module) => ({ default: module.About })),
 );
 
-// Main App component wrapped with theme context
 function AppContent() {
   const { palette, toggleTheme } = useTheme();
 
