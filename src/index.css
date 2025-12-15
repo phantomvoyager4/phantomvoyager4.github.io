@@ -81,8 +81,9 @@
 }
 
 html {
-    scrollbar-gutter: stable both-edges;
+    scrollbar-gutter: stable;
     width: 100%;
+    overflow-y: scroll;
     overflow-x: hidden;
     background-color: var(--color-background);
     transition: background-color var(--transition-slow);
@@ -103,8 +104,10 @@ header {
     max-width: none !important;
     box-sizing: border-box !important;
     margin: 0 !important;
+    margin-right: calc(-1 * (100vw - 100%)) !important;
     left: 0 !important;
     right: 0 !important;
+    position: fixed !important;
 }
 
 /* Prevent specific elements from causing horizontal scroll but allow content to have proper width */

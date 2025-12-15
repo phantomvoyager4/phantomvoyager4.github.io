@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import { ThemeProvider, useTheme } from "./contexts/ThemeContext";
 import ErrorBoundary from "./Components/ErrorBoundary";
@@ -9,6 +9,9 @@ const Home = lazy(() =>
 );
 const About = lazy(() =>
   import("./Pages/zaboutme").then((module) => ({ default: module.About })),
+);
+const Stats = lazy(() =>
+  import("./Pages/stats").then((module) => ({ default: module.Stats })),
 );
 
 function AppContent() {
@@ -36,6 +39,10 @@ function AppContent() {
             <Route
               path="/about"
               element={<About palette={palette} toggleTheme={toggleTheme} />}
+            />
+            <Route
+              path="/stats"
+              element={<Stats palette={palette} toggleTheme={toggleTheme} />}
             />
           </Routes>
         </Suspense>

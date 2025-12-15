@@ -6,45 +6,44 @@ import Menu from "../Components/Navbar";
 import Playlist from "../Components/Playlist";
 import Songsdisplay from "../Components/Songsdisplay";
 import ContactForm from "../Components/ContactForm";
-import ScrollIndicator from "../Components/ScrollIndicator";
 import { useState } from "react";
 
 export function Home({ palette, toggleTheme }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <>
-      <div className="fixed z-60">
-        <Menu
-          open={menuOpen}
-          onClose={() => setMenuOpen(false)}
-          palette={palette}
-        />
-      </div>
-      <div className="fixed z-50">
-        <Header
-          onBurgerClick={() => setMenuOpen(true)}
-          onNightmodeClick={toggleTheme}
-          palette={palette}
-        />
-      </div>
-      <div className="flex flex-col items-center h-full sm:pt-[146px] pt-[80px]">
-        <div className="flex flex-col gap-[96px] pb-[64px]">
-          <div className="flex flex-col items-center">
-            <Hello palette={palette} />
-            <div className="mt-8">
-              <Card palette={palette} />
+    <div className="overflow-x-hidden">
+      <Header
+        onBurgerClick={() => setMenuOpen(true)}
+        onNightmodeClick={toggleTheme}
+        palette={palette}
+        menuOpen={menuOpen}
+      />
+      <Menu
+        open={menuOpen}
+        onClose={() => setMenuOpen(false)}
+        palette={palette}
+      />
+      <main className="home-page min-h-screen pt-[88px] sm:pt-[120px] pb-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+          <div className="flex flex-col items-center h-full">
+            <div className="flex flex-col gap-[96px] pb-[64px]">
+              <div className="flex flex-col items-center">
+                <Hello palette={palette} />
+                <div className="mt-8">
+                  <Card palette={palette} />
+                </div>
+              </div>
+              <div className="flex flex-col">
+                <Songsdisplay palette={palette} />
+                <Playlist palette={palette} />
+              </div>
+              <ContactForm palette={palette} />
             </div>
           </div>
-          <div className="flex flex-col">
-            <Songsdisplay palette={palette} />
-            <Playlist palette={palette} />
-          </div>
-          <ContactForm palette={palette} />
         </div>
-      </div>
+      </main>
       <Copyright palette={palette} />
-      <ScrollIndicator palette={palette} />
-    </>
+    </div>
   );
 }

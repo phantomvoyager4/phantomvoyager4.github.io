@@ -17,7 +17,6 @@ function Header({ onBurgerClick, onNightmodeClick, palette, menuOpen }) {
       className="fixed top-0 left-0 sm:h-[88px] h-[56px] grid grid-cols-3 items-center px-4 sm:px-[24px] z-40"
       style={{
         backgroundColor: palette.headerBg,
-        width: "100vw",
         right: 0,
       }}
     >
@@ -65,7 +64,7 @@ function Header({ onBurgerClick, onNightmodeClick, palette, menuOpen }) {
         <motion.div
           className="font-InriaSerif text-3xl sm:text-5xl md:text-7xl text-center whitespace-nowrap"
           style={{ color: palette.headerText }}
-          whileHover={{ scale: 1.02 }}
+          whileHover={{ scale: 1.01 }}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
         >
           Kashiami
