@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -8,10 +8,24 @@ function Songsdisplay({ palette }) {
   const current = 0;
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
 
   useEffect(() => {
-    if (inView) controls.start({ y: 0, opacity: 1 });
-  }, [controls, inView]);
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (!isDesktop) {
+      controls.start({ y: 0, opacity: 1 });
+    } else if (inView) {
+      controls.start({ y: 0, opacity: 1 });
+    }
+  }, [controls, inView, isDesktop]);
 
   const len = Songscardstorage.length;
   const i1 = current;
@@ -21,7 +35,7 @@ function Songsdisplay({ palette }) {
   return (
     <motion.section
       ref={ref}
-      initial={{ y: -20, opacity: 0 }}
+      initial={isDesktop ? { y: -20, opacity: 0 } : { y: 0, opacity: 1 }}
       animate={controls}
       transition={{ duration: 0.6 }}
     >
