@@ -176,7 +176,7 @@ function Card({ palette }) {
                           src={data?.logo || ""}
                           alt="Album Cover"
                           className="sm:w-[400px] w-[300px] sm:h-[400px] h-[300px] object-cover max-[550px]:w-[250px] max-[550px]:h-[250px] max-[400px]:w-[200px] max-[400px]:h-[200px]"
-                          placeholderColor="bg-purple-100 dark:bg-purple-900"
+                          placeholderColor="bg-black-100 dark:bg-black-900"
                         />
                       </motion.div>
 

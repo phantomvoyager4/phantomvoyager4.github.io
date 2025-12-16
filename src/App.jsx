@@ -13,6 +13,9 @@ const About = lazy(() =>
 const Stats = lazy(() =>
   import("./Pages/stats").then((module) => ({ default: module.Stats })),
 );
+const Contact = lazy(() =>
+  import("./Pages/contact").then((module) => ({ default: module.Contact })),
+);
 
 function AppContent() {
   const { palette, toggleTheme } = useTheme();
@@ -43,6 +46,10 @@ function AppContent() {
             <Route
               path="/stats"
               element={<Stats palette={palette} toggleTheme={toggleTheme} />}
+            />
+            <Route
+              path="/contact"
+              element={<Contact palette={palette} toggleTheme={toggleTheme} />}
             />
           </Routes>
         </Suspense>

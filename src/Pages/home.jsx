@@ -5,7 +5,6 @@ import Card from "../Components/Card";
 import Menu from "../Components/Navbar";
 import Playlist from "../Components/Playlist";
 import Songsdisplay from "../Components/Songsdisplay";
-import ContactForm from "../Components/ContactForm";
 import { useState } from "react";
 
 export function Home({ palette, toggleTheme }) {
@@ -38,7 +37,6 @@ export function Home({ palette, toggleTheme }) {
                 <Songsdisplay palette={palette} />
                 <Playlist palette={palette} />
               </div>
-              <ContactForm palette={palette} />
             </div>
           </div>
         </div>
