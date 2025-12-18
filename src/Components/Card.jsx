@@ -351,7 +351,7 @@ function Card({ palette }) {
         {/* Next Arrow */}
         <motion.button
           className="cursor-pointer max-[550px]:hidden p-3 transition-all duration-300"
-          onClick={handlePrev}
+          onClick={handleNext}
           initial={{ opacity: 0.3 }}
           whileHover={{
             scale: 1.1,
@@ -362,7 +362,7 @@ function Card({ palette }) {
             filter: `invert(${palette.icon === "#181818" ? 1 : 0})`,
           }}
         >
-          <img src={strzalkaDP} alt="Previous" className="w-6 h-6" />
+          <img src={strzalkaDP} alt="Next" className="w-6 h-6" />
         </motion.button>
       </div>
     </motion.section>
