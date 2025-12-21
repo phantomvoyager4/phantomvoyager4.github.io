@@ -1,0 +1,91 @@
+{
+  "name": "Kashiami - Polish Jumpstyle Music Producer",
+  "short_name": "Kashiami",
+  "description": "Official website of Kashiami, a Polish jumpstyle and hardstyle music producer. Stream music on Spotify, Apple Music & YouTube.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#181818",
+  "background_color": "#212121",
+  "lang": "en",
+  "categories": ["music", "entertainment"],
+  "icons": [
+    {
+      "src": "/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-wide.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-narrow.jpg",
+      "sizes": "360x640",
+      "type": "image/jpeg",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Stream on Spotify",
+      "short_name": "Spotify",
+      "description": "Listen to Kashiami's music on Spotify",
+      "url": "https://open.spotify.com/artist/7yFxrWhhvzk9OQz2aTIhul",
+      "icons": [
+        {
+          "src": "/favicon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Apple Music",
+      "short_name": "Apple Music",
+      "description": "Listen to Kashiami's music on Apple Music",
+      "url": "https://music.apple.com/us/artist/kashiami/1777722735",
+      "icons": [
+        {
+          "src": "/favicon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "YouTube Music",
+      "short_name": "YouTube",
+      "description": "Listen to Kashiami's music on YouTube Music",
+      "url": "https://music.youtube.com/channel/UC-Cs85x5T2AQ5db0cKAMWuA",
+      "icons": [
+        {
+          "src": "/favicon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}
