@@ -60,10 +60,8 @@ function Menu({ open, onClose, palette }) {
       },
     ];
 
-    if (currentPath === "/") {
-      return [
-        ...baseItems,
-        {
+    const allPageItems = [
+      {
         label: "Direct contact",
         href: "/contact",
         external: false,
@@ -82,56 +80,10 @@ function Menu({ open, onClose, palette }) {
             />
           </svg>
         ),
-        },
-        {
-          label: "About me",
-          href: "/about",
-          external: false,
-          icon: (
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-              />
-            </svg>
-          ),
-        },
-        {
-          label: "My statistics",
-          href: "/stats",
-          external: false,
-          icon: (
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-              />
-            </svg>
-          ),
-        },
-        
-      ];
-    }
-
-    return [
-      ...baseItems,
+      },
       {
-        label: "Home",
-        href: "/",
+        label: "About me",
+        href: "/about",
         external: false,
         icon: (
           <svg
@@ -144,12 +96,42 @@ function Menu({ open, onClose, palette }) {
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
-              d="M3 12l2-3m0 0l7-4 7 4M5 9v10a1 1 0 001 1h12a1 1 0 001-1V9m-9 11l4-4m0 0l4 4m-4-4V8"
+              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+            />
+          </svg>
+        ),
+      },
+      {
+        label: "Statistics",
+        href: "/stats",
+        external: false,
+        icon: (
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
             />
           </svg>
         ),
       },
     ];
+
+    // On home page, show all items
+    if (currentPath === "/") {
+      return [...baseItems, ...allPageItems];
+    }
+
+    // On subpages, filter out the current page from allPageItems
+    const filteredItems = allPageItems.filter(item => item.href !== currentPath);
+    
+    return [...baseItems, ...filteredItems];
   };
 
   const menuItems = getMenuItems();
