@@ -17,7 +17,6 @@ const OptimizedImage = ({
   const [isInView, setIsInView] = useState(loading === "eager");
   const imgRef = useRef(null);
 
-  // Intersection Observer for lazy loading
   useEffect(() => {
     if (loading === "eager") {
       setIsInView(true);
@@ -55,7 +54,6 @@ const OptimizedImage = ({
 
   return (
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
-      {/* Placeholder/Loading state */}
       {showPlaceholder && !isLoaded && !hasError && shouldShowImage && (
         <div
           className={`absolute inset-0 ${placeholderColor} animate-pulse flex items-center justify-center`}
@@ -76,7 +74,6 @@ const OptimizedImage = ({
         </div>
       )}
 
-      {/* Empty placeholder when no src */}
       {!src && (
         <div
           className={`absolute inset-0 ${placeholderColor} flex items-center justify-center`}
@@ -97,7 +94,6 @@ const OptimizedImage = ({
         </div>
       )}
 
-      {/* Error state */}
       {hasError && (
         <div
           className={`absolute inset-0 ${placeholderColor} flex items-center justify-center`}
@@ -121,7 +117,6 @@ const OptimizedImage = ({
         </div>
       )}
 
-      {/* Actual image */}
       {shouldShowImage && (
         <motion.img
           src={src}
@@ -140,7 +135,6 @@ const OptimizedImage = ({
   );
 };
 
-// Higher-order component for common image patterns
 export const ArtistImage = ({ src, alt, ...props }) => (
   <OptimizedImage
     src={src}

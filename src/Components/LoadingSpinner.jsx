@@ -89,7 +89,6 @@ const LoadingSpinner = ({
     );
   }
 
-  // Default spinner variant
   return (
     <div className={`flex flex-col items-center justify-center ${className}`}>
       <motion.div
@@ -117,7 +116,6 @@ const LoadingSpinner = ({
   );
 };
 
-// Full page loading component
 export const FullPageLoader = ({ text = 'Loading...', variant = 'spinner' }) => {
   const { palette } = useTheme();
 
@@ -140,7 +138,6 @@ export const FullPageLoader = ({ text = 'Loading...', variant = 'spinner' }) => 
   );
 };
 
-// Skeleton loader for cards
 export const CardSkeleton = ({ className = '' }) => {
   const { palette } = useTheme();
 
@@ -165,7 +162,6 @@ export const CardSkeleton = ({ className = '' }) => {
   );
 };
 
-// Inline loader for buttons
 export const ButtonLoader = ({ size = 'small' }) => {
   const { palette } = useTheme();
 
@@ -186,7 +182,6 @@ export const ButtonLoader = ({ size = 'small' }) => {
   );
 };
 
-// Music note animation loader
 export const MusicLoader = ({ className = '' }) => {
   const { palette } = useTheme();
 

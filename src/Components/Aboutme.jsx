@@ -169,7 +169,6 @@ function Aboutme({ palette }) {
             ))}
           </div>
         </motion.div>
-        {/* Back to Main Page */}
         <motion.div
           className="mt-12"
           initial={{ opacity: 0 }}

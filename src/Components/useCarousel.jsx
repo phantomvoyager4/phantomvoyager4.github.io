@@ -22,11 +22,9 @@ export const useCarousel = () => {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
 
-  // Ensure current index is always valid
   const validCurrent =
     current < 0 ? 0 : current >= cardStorage.length ? 0 : current;
 
-  // Ensure data is always valid
   const data = cardStorage[validCurrent] || {};
 
   const isMobile = useMediaQuery("(max-width: 550px)");

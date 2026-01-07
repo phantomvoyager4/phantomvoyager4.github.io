@@ -11,12 +11,10 @@ class ErrorBoundary extends Component {
   }
 
   static getDerivedStateFromError(error) {
-    // Update state so the next render will show the fallback UI
     return { hasError: true };
   }
 
   componentDidCatch(error, errorInfo) {
-    // Log error to console or error reporting service
     console.error('Error caught by ErrorBoundary:', error, errorInfo);
 
     this.setState({
@@ -82,7 +80,6 @@ class ErrorBoundary extends Component {
               </button>
             </div>
 
-            {/* Show error details in development */}
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">

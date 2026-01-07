@@ -25,25 +25,21 @@ function Card({ palette }) {
   const [isHoveringImage, setIsHoveringImage] = useState(false);
   const [showSwipeIndicator, setShowSwipeIndicator] = useState(false);
 
-  // Platform-specific hover colors
   const getPlatformHoverColor = (link, index) => {
     const platformColors = {
-      0: "#FF0000", // YouTube
-      1: "#FA243C", // Apple Music
-      2: "#1DB954", // Spotify
+      0: "#FF0000",
+      1: "#FA243C",
+      2: "#1DB954",
     };
     return platformColors[index] || palette.cardIcon;
   };
 
-  // Control swipe indicator visibility
   useEffect(() => {
     if (isMobile && totalCards > 1) {
-      // Show indicator after initial load
       const showTimer = setTimeout(() => {
         setShowSwipeIndicator(true);
       }, 2000);
 
-      // Hide indicator after some time
       const hideTimer = setTimeout(() => {
         setShowSwipeIndicator(false);
       }, 8000);
@@ -55,7 +51,6 @@ function Card({ palette }) {
     }
   }, [isMobile, totalCards]);
 
-  // Hide indicator when user interacts
   const handleCardInteraction = () => {
     setShowSwipeIndicator(false);
   };
@@ -68,7 +63,6 @@ function Card({ palette }) {
       className="w-full flex justify-center items-center"
     >
       <div className="flex flex-row items-center sm:gap-8 gap-4 w-full justify-center">
-        {/* Previous Arrow */}
         <motion.button
           className="cursor-pointer max-[550px]:hidden p-3 transition-all duration-300"
           onClick={handlePrev}
@@ -348,7 +342,6 @@ function Card({ palette }) {
           </motion.div>
         </motion.div>
 
-        {/* Next Arrow */}
         <motion.button
           className="cursor-pointer max-[550px]:hidden p-3 transition-all duration-300"
           onClick={handleNext}

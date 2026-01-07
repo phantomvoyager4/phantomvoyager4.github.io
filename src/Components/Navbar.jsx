@@ -123,12 +123,10 @@ function Menu({ open, onClose, palette }) {
       },
     ];
 
-    // On home page, show all items
     if (currentPath === "/") {
       return [...baseItems, ...allPageItems];
     }
 
-    // On subpages, filter out the current page from allPageItems
     const filteredItems = allPageItems.filter(item => item.href !== currentPath);
     
     return [...baseItems, ...filteredItems];
@@ -186,7 +184,6 @@ function Menu({ open, onClose, palette }) {
     <AnimatePresence>
       {open && (
         <>
-          {/* Backdrop - No blur, just click area */}
           <motion.div
             className="fixed inset-0 bg-transparent z-40"
             variants={backdropVariants}

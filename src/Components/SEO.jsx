@@ -10,10 +10,8 @@ const SEO = ({
   keywords = "Kashiami, music, artist, producer, creative, songs, albums",
 }) => {
   useEffect(() => {
-    // Update document title
     document.title = title === "Kashiami" ? title : `${title} | Kashiami`;
 
-    // Helper function to set or update meta tags
     const setMetaTag = (name, content, property = false) => {
       const attribute = property ? "property" : "name";
       let tag = document.querySelector(`meta[${attribute}="${name}"]`);
@@ -27,14 +25,12 @@ const SEO = ({
       tag.setAttribute("content", content);
     };
 
-    // Basic meta tags
     setMetaTag("description", description);
     setMetaTag("keywords", keywords);
     setMetaTag("author", author);
     setMetaTag("viewport", "width=device-width, initial-scale=1.0");
     setMetaTag("robots", "index, follow");
 
-    // Open Graph meta tags
     setMetaTag("og:title", title, true);
     setMetaTag("og:description", description, true);
     setMetaTag("og:image", image, true);
@@ -42,18 +38,15 @@ const SEO = ({
     setMetaTag("og:type", type, true);
     setMetaTag("og:site_name", "Kashiami", true);
 
-    // Twitter meta tags
     setMetaTag("twitter:card", "summary_large_image");
     setMetaTag("twitter:title", title);
     setMetaTag("twitter:description", description);
     setMetaTag("twitter:image", image);
 
-    // Additional meta tags for music artists
     setMetaTag("music:musician", "Kashiami", true);
     setMetaTag("application-name", "Kashiami");
     setMetaTag("theme-color", "#212121");
 
-    // Structured data for artist/musician
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "MusicGroup",
@@ -72,7 +65,6 @@ const SEO = ({
       "@id": url,
     };
 
-    // Update or create structured data script tag
     let structuredDataScript = document.querySelector("#structured-data");
     if (!structuredDataScript) {
       structuredDataScript = document.createElement("script");
@@ -82,18 +74,12 @@ const SEO = ({
     }
     structuredDataScript.textContent = JSON.stringify(structuredData);
 
-    // Cleanup function to prevent memory leaks
-    return () => {
-      // Note: We don't remove meta tags on cleanup as they should persist
-      // across route changes for SEO purposes
-    };
+    return () => {};
   }, [title, description, image, url, type, author, keywords]);
 
-  // This component doesn't render anything visible
   return null;
 };
 
-// Predefined SEO configurations for different pages
 export const HomePageSEO = (props) => (
   <SEO
     title="Home"
@@ -112,10 +98,8 @@ export const AboutPageSEO = (props) => (
   />
 );
 
-// Hook for dynamic SEO updates
 export const useSEO = () => {
   const updateSEO = (seoProps) => {
-    // This could be used to dynamically update SEO without re-rendering the component
     const event = new CustomEvent("seo-update", { detail: seoProps });
     window.dispatchEvent(event);
   };

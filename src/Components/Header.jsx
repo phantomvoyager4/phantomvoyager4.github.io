@@ -20,7 +20,6 @@ function Header({ onBurgerClick, onNightmodeClick, palette, menuOpen }) {
         right: 0,
       }}
     >
-      {/* Left side - Burger menu */}
       <div className="flex items-center justify-start">
         <motion.div
           className="relative p-2 rounded-lg cursor-pointer flex-shrink-0 transition-all duration-200"
@@ -59,7 +58,6 @@ function Header({ onBurgerClick, onNightmodeClick, palette, menuOpen }) {
         </motion.div>
       </div>
 
-      {/* Center - Logo */}
       <Link to="/" className="flex justify-center">
         <motion.div
           className="font-InriaSerif text-3xl sm:text-5xl md:text-7xl text-center whitespace-nowrap"
@@ -71,9 +69,7 @@ function Header({ onBurgerClick, onNightmodeClick, palette, menuOpen }) {
         </motion.div>
       </Link>
 
-      {/* Right side - Theme Toggle and CTA Button */}
       <div className="flex items-center justify-end space-x-2 sm:space-x-3">
-        {/* Theme Toggle */}
         <motion.button
           onClick={onNightmodeClick}
           className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg cursor-pointer flex-shrink-0 transition-colors duration-200"
@@ -88,7 +84,6 @@ function Header({ onBurgerClick, onNightmodeClick, palette, menuOpen }) {
           <img src={modeIcon} alt={modeAlt} className="w-6 h-6 sm:w-8 sm:h-8" />
         </motion.button>
 
-        {/* CTA Button */}
         <motion.a
           href={linktreeUrl}
           target="_blank"
@@ -112,7 +107,6 @@ function Header({ onBurgerClick, onNightmodeClick, palette, menuOpen }) {
           <span className="font-InriaSerif text-[16px]">Listen Now</span>
         </motion.a>
 
-        {/* Mobile CTA - Icon only */}
         <motion.a
           href={linktreeUrl}
           target="_blank"
