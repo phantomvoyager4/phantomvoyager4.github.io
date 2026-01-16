@@ -23,10 +23,10 @@ export function Stats({ palette, toggleTheme }) {
         onClose={() => setMenuOpen(false)}
         palette={palette}
       />
-      <main className="stats-page min-h-screen pt-[88px] sm:pt-[120px] pb-8">
+      <main className="stats-page min-h-screen pt-[88px] sm:pt-[120px] pb-8 flex flex-col items-center">
         <Breadcrumbs palette={palette} />
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+        <div className="w-full px-3 sm:px-4 md:px-6 lg:px-8 max-w-6xl mx-auto flex flex-col items-center justify-center">
           <Statsdesc palette={palette} />
         </div>
       </main>
