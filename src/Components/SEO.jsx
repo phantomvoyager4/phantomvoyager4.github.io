@@ -31,6 +31,15 @@ const SEO = ({
     setMetaTag("viewport", "width=device-width, initial-scale=1.0");
     setMetaTag("robots", "index, follow");
 
+    // Set canonical tag
+    let canonicalTag = document.querySelector("link[rel='canonical']");
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.href = url;
+
     setMetaTag("og:title", title, true);
     setMetaTag("og:description", description, true);
     setMetaTag("og:image", image, true);
@@ -94,6 +103,27 @@ export const AboutPageSEO = (props) => (
     title="About Me"
     description="Learn more about Kashiami - my musical journey, influences, creative process, and the story behind the music. Get to know the artist behind the sound."
     keywords="Kashiami, about, biography, artist story, music journey, creative process"
+    url="https://kashiami.com/about"
+    {...props}
+  />
+);
+
+export const ContactPageSEO = (props) => (
+  <SEO
+    title="Contact"
+    description="Get in touch with Kashiami for collaborations, bookings, inquiries, or just to say hello. Fill out the contact form and I'll get back to you soon."
+    keywords="Kashiami, contact, collaboration, booking, inquiry, get in touch"
+    url="https://kashiami.com/contact"
+    {...props}
+  />
+);
+
+export const StatsPageSEO = (props) => (
+  <SEO
+    title="Stats"
+    description="Check out Kashiami's streaming statistics, music metrics, and performance across all major platforms including Spotify, Apple Music, and YouTube."
+    keywords="Kashiami, stats, statistics, streaming, metrics, music charts"
+    url="https://kashiami.com/stats"
     {...props}
   />
 );

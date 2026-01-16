@@ -4,12 +4,14 @@ import Breadcrumbs from "../Components/Breadcrumbs";
 import Copyright from "../Components/Copyright";
 import { useState } from "react";
 import Statsdesc from "../Components/statsdesc";
+import { StatsPageSEO } from "../Components/SEO";
 
 export function Stats({ palette, toggleTheme }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div className="overflow-x-hidden">
+      <StatsPageSEO />
       <Header
         onBurgerClick={() => setMenuOpen(true)}
         onNightmodeClick={toggleTheme}

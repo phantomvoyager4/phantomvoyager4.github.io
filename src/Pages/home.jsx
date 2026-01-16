@@ -5,6 +5,7 @@ import Card from "../Components/Card";
 import Menu from "../Components/Navbar";
 import Playlist from "../Components/Playlist";
 import Songsdisplay from "../Components/Songsdisplay";
+import { HomePageSEO } from "../Components/SEO";
 import { useState } from "react";
 
 export function Home({ palette, toggleTheme }) {
@@ -12,6 +13,7 @@ export function Home({ palette, toggleTheme }) {
 
   return (
     <div className="overflow-x-hidden">
+      <HomePageSEO url="https://kashiami.com/" />
       <Header
         onBurgerClick={() => setMenuOpen(true)}
         onNightmodeClick={toggleTheme}

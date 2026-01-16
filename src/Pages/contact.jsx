@@ -4,11 +4,13 @@ import Header from "../Components/Header";
 import Menu from "../Components/Navbar";
 import Copyright from "../Components/Copyright";
 import Breadcrumbs from "../Components/Breadcrumbs";
+import { ContactPageSEO } from "../Components/SEO";
 
 export function Contact({ palette, toggleTheme }) {
   const [menuOpen, setMenuOpen] = useState(false);
     return(
       <div className="overflow-x-hidden">
+      <ContactPageSEO />
       <Breadcrumbs palette={palette} />
       <Header
         onBurgerClick={() => setMenuOpen(true)}

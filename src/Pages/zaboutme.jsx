@@ -3,6 +3,7 @@ import Menu from "../Components/Navbar";
 import Breadcrumbs from "../Components/Breadcrumbs";
 import Aboutme from "../Components/Aboutme";
 import Copyright from "../Components/Copyright";
+import { AboutPageSEO } from "../Components/SEO";
 import { useState } from "react";
 
 export function About({ palette, toggleTheme }) {
@@ -10,6 +11,7 @@ export function About({ palette, toggleTheme }) {
 
   return (
     <div className="overflow-x-hidden">
+      <AboutPageSEO />
       <Header
         onBurgerClick={() => setMenuOpen(true)}
         onNightmodeClick={toggleTheme}
