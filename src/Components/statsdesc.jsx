@@ -1,9 +1,11 @@
-import plot from './assets/youtube_views_over_time.png';
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { platforms } from "./cardStorage";
+import plot_light from './assets/youtube_views_over_time_lightmode.png';
+import plot_dark from './assets/youtube_views_over_time_darkmode.png';
+import { useTheme } from "../contexts/ThemeContext";
+
 
 export default function statsdesc ({ palette }) {
+    const { theme } = useTheme();
 
     return (
         <motion.section
@@ -67,7 +69,7 @@ export default function statsdesc ({ palette }) {
                     transition={{ delay: 0.4, duration: 0.6 }}
                 >
                     <img 
-                        src={plot} 
+                        src={theme === 'dark' ? plot_dark : plot_light} 
                         alt="YouTube views over time" 
                         className="w-full max-w-4xl h-auto rounded-lg shadow-md"
                     />
