@@ -1,4 +1,4 @@
-import LogoJ from "./assets/Logoj.jpg";
+import LogoJ from "./assets/prof.jpg";
 import Music from "./assets/Music.svg";
 import Youtube from "./assets/Youtube.svg";
 import Spotify from "./assets/Spotify.png";
