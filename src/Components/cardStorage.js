@@ -3,6 +3,8 @@ import Music from "./assets/Music.svg";
 import Youtube from "./assets/Youtube.svg";
 import Spotify from "./assets/Spotify.png";
 import Voyager from "./assets/voyagerbootleg.jpg"
+import Antihero from './assets/antihero.jpg';
+
 
 // Environment variables with fallbacks
 const config = {
@@ -82,9 +84,9 @@ export const cardStorage = [
   },
   {
     id: "latest-single",
-    logo: Voyager,
+    logo: Antihero,
     logoHref:
-      "https://music.youtube.com/playlist?list=OLAK5uy_mMhAmlgHeerT8bqjotQWv_j22xUXf3quk",
+      "https://www.youtube.com/watch?v=T_DnVYczaU8&list=OLAK5uy_k17lwf0uu58vQi74ijcysjRAr5Rldoso8",
     streamText: "Check out my latest single",
     description: "Voyager Bootleg - My latest musical creation",
     links: [

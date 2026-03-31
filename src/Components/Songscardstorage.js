@@ -1,18 +1,20 @@
-import Newwave from './assets/newwave.jpg';
 import Voyager from './assets/voyagerbootleg.jpg';
-import Orlean from './assets/orlean.jpg';
+import Antihero from './assets/antihero.jpg';
+import Scrutiny from './assets/scrutiny.jpg';
 
 export const Songscardstorage = [
+    {
+    logo: Antihero,
+    logoHref: "https://www.youtube.com/watch?v=T_DnVYczaU8&list=OLAK5uy_k17lwf0uu58vQi74ijcysjRAr5Rldoso8",
+  },
   {
-    logo: Newwave,
-    logoHref: "https://www.youtube.com/watch?v=fkKJEUWPAzY&list=OLAK5uy_kSVZJyaUBTUUgtxXE6ixLo-_v5dG8xPZ0",
+    logo: Scrutiny,
+    logoHref: "https://www.youtube.com/watch?v=QMkRufZcuVI&list=OLAK5uy_kKngbdexNb2u2TKkN5mjWm6BMpltxYwQE",
   },
   {
     logo: Voyager,
     logoHref: "https://music.youtube.com/playlist?list=OLAK5uy_mMhAmlgHeerT8bqjotQWv_j22xUXf3quk",
-  },
-  {
-    logo: Orlean,
-    logoHref: "https://www.youtube.com/watch?v=wyA1gK69j1o&list=OLAK5uy_k8GXNW5yvOaAoZkVNbc0jmFmeQYi_JHdw",
   }
+
+
 ];
